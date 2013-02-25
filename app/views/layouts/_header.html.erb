@@ -1,0 +1,42 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= image_tag("logo6.png", :size => "20x20", :id => "logo") %>
+      <%= link_to "DustRise", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li id="fat-menu" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Solutions</strong><b class="caret"></b>
+              </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Mobile", mobile_path %></li>
+              <li><%= link_to "Web 2.0", web_path %></li>
+              <li><%= link_to "Big Data", bigdata_path %></li>
+              <li><%= link_to "Cloud", cloud_path %></li>
+            </ul>
+          </li>
+
+          <li id="fat-menu" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Services</strong><b class="caret"></b>
+              </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Consulting", root_path %></li>
+              <li><%= link_to "Staffing", root_path %></li>
+              <li><%= link_to "Training", root_path %></li>
+            </ul>
+          </li>
+
+          <li id="fat-menu" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Home</strong><b class="caret"></b>
+              </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Team", team_path %></li>
+              <li><%= link_to "Contact Us", contact_path %></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

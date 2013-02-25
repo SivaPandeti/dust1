@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DustRise</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>    
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+
+
+
+	<div id="myCarousel" class="carousel slide">
+  		<!-- Carousel items -->
+  		<div class="carousel-inner">
+    		<div class="active item img-wide"><%= image_tag("lamborghini-dustfront.png", :class => "img-wide") %></div>
+    		<div class="item img-wide"><%= image_tag("lamborghini-red.png", :class => "img-wide") %></div>
+    		<div class="item img-wide"><%= image_tag("lamborghini-orange.png", :class => "img-wide") %></div>
+  		</div>
+  		<!-- Carousel nav -->
+  		<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  		<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+
+
+    <div class="container main-content">
+
+      <%= yield %>
+    </div>
+
+    <%= render 'layouts/footer' %>
+
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+  </body>
+</html>
